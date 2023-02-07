@@ -1,0 +1,279 @@
+administrateur@Zalman:~> darktable
+
+(darktable:4515): dbind-WARNING **: 17:07:35.425: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+https://debuginfod.opensuse.org/
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[New LWP 4516]
+[New LWP 4517]
+[New LWP 4518]
+[New LWP 4519]
+[New LWP 4520]
+[New LWP 4521]
+[New LWP 4522]
+[New LWP 4523]
+[New LWP 4524]
+[New LWP 4525]
+[New LWP 4526]
+[New LWP 4527]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0x00007fba9c0e19d7 in wait4 () from /lib64/libc.so.6
+Warning: 'set logging on', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled on'.
+
+"on" or "off" expected.
+#0  0x00007fba9c0e19d7 in wait4 () from /lib64/libc.so.6
+#1  0x00007fba9c396728 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+#2  <signal handler called>
+#3  0x0000000000000000 in ?? ()
+#4  0x00007fba600a7f0e in ?? () from /lib64/libamdocl64.so
+#5  0x00007fba600a885f in ?? () from /lib64/libamdocl64.so
+#6  0x00007fba60415903 in ?? () from /lib64/libamdocl64.so
+#7  0x00007fba60416b93 in ?? () from /lib64/libamdocl64.so
+#8  0x00007fba6000729a in ?? () from /lib64/libamdocl64.so
+#9  0x00007fba600087a7 in ?? () from /lib64/libamdocl64.so
+#10 0x00007fba60008936 in ?? () from /lib64/libamdocl64.so
+#11 0x00007fba5ffed717 in ?? () from /lib64/libamdocl64.so
+#12 0x00007fba5ffba5a2 in clIcdGetPlatformIDsKHR () from /lib64/libamdocl64.so
+#13 0x00007fba942a3ed9 in ?? () from /lib64/libOpenCL.so.1
+#14 0x00007fba942a8616 in ?? () from /lib64/libOpenCL.so.1
+#15 0x00007fba942a8a44 in clGetPlatformIDs () from /lib64/libOpenCL.so.1
+#16 0x00007fba9c38051f in dt_opencl_init () from /usr/bin/../lib64/darktable/libdarktable.so
+#17 0x00007fba9c2efa01 in dt_init () from /usr/bin/../lib64/darktable/libdarktable.so
+#18 0x0000558637570088 in ?? ()
+#19 0x00007fba9c02c5b0 in __libc_start_call_main () from /lib64/libc.so.6
+#20 0x00007fba9c02c679 in __libc_start_main_impl () from /lib64/libc.so.6
+#21 0x00005586375700d5 in ?? ()
+
+=========
+
+  Id   Target Id                                        Frame 
+* 1    Thread 0x7fba9590e140 (LWP 4515) "darktable"     0x00007fba9c0e19d7 in wait4 () from /lib64/libc.so.6
+  2    Thread 0x7fba955ff6c0 (LWP 4516) "gmain"         0x00007fba9c10bb7f in poll () from /lib64/libc.so.6
+  3    Thread 0x7fba94dfe6c0 (LWP 4517) "pool"          0x00007fba9c111a8d in syscall () from /lib64/libc.so.6
+  4    Thread 0x7fba8ff8b6c0 (LWP 4518) "gdbus"         0x00007fba9c10bb7f in poll () from /lib64/libc.so.6
+  5    Thread 0x7fba8f78a6c0 (LWP 4519) "worker 0"      0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+  6    Thread 0x7fba8ef896c0 (LWP 4520) "worker 1"      0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+  7    Thread 0x7fba8e7886c0 (LWP 4521) "worker 2"      0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+  8    Thread 0x7fba8df876c0 (LWP 4522) "worker 3"      0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+  9    Thread 0x7fba8d7866c0 (LWP 4523) "kicker"        0x00007fba9c0dcd45 in clock_nanosleep@GLIBC_2.2.5 () from /lib64/libc.so.6
+  10   Thread 0x7fba8cf856c0 (LWP 4524) "worker res 0"  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+  11   Thread 0x7fba77fff6c0 (LWP 4525) "worker res 1"  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+  12   Thread 0x7fba777fe6c0 (LWP 4526) "worker res 2"  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+  13   Thread 0x7fba76ffd6c0 (LWP 4527) "gphoto_update" 0x00007fba9c0dcd45 in clock_nanosleep@GLIBC_2.2.5 () from /lib64/libc.so.6
+
+=========
+
+Thread 13 (Thread 0x7fba76ffd6c0 (LWP 4527) "gphoto_update"):
+#0  0x00007fba9c0dcd45 in clock_nanosleep@GLIBC_2.2.5 () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c0e1c57 in nanosleep () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9be15eef in g_usleep () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007fba9c52832a in dt_update_cameras_thread () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#4  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#5  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 12 (Thread 0x7fba777fe6c0 (LWP 4526) "worker res 2"):
+#0  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c092cd0 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9c3a9c26 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#3  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#4  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 11 (Thread 0x7fba77fff6c0 (LWP 4525) "worker res 1"):
+#0  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c092cd0 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9c3a9c26 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#3  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#4  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 10 (Thread 0x7fba8cf856c0 (LWP 4524) "worker res 0"):
+#0  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c092cd0 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9c3a9c26 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#3  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#4  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 9 (Thread 0x7fba8d7866c0 (LWP 4523) "kicker"):
+#0  0x00007fba9c0dcd45 in clock_nanosleep@GLIBC_2.2.5 () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c0e1c57 in nanosleep () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9c0e1b6e in sleep () from /lib64/libc.so.6
+No symbol table info available.
+#3  0x00007fba9c3a9e8a in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#4  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#5  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 8 (Thread 0x7fba8df876c0 (LWP 4522) "worker 3"):
+#0  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c092cd0 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9c3aa126 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#3  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#4  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 7 (Thread 0x7fba8e7886c0 (LWP 4521) "worker 2"):
+#0  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c092cd0 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9c3aa126 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#3  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#4  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 6 (Thread 0x7fba8ef896c0 (LWP 4520) "worker 1"):
+#0  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c092cd0 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9c3aa126 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#3  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#4  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 5 (Thread 0x7fba8f78a6c0 (LWP 4519) "worker 0"):
+#0  0x00007fba9c090006 in __futex_abstimed_wait_common () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c092cd0 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libc.so.6
+No symbol table info available.
+#2  0x00007fba9c3aa126 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#3  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#4  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 4 (Thread 0x7fba8ff8b6c0 (LWP 4518) "gdbus"):
+#0  0x00007fba9c10bb7f in poll () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9bde9dbe in ?? () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007fba9bdea10f in g_main_loop_run () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007fba9b193506 in ?? () from /lib64/libgio-2.0.so.0
+No symbol table info available.
+#4  0x00007fba9be14465 in ?? () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#6  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 3 (Thread 0x7fba94dfe6c0 (LWP 4517) "pool"):
+#0  0x00007fba9c111a8d in syscall () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9be3ee4c in g_cond_wait_until () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007fba9bdb78d1 in ?? () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007fba9be14e92 in ?? () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007fba9be14465 in ?? () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#6  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 2 (Thread 0x7fba955ff6c0 (LWP 4516) "gmain"):
+#0  0x00007fba9c10bb7f in poll () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9bde9dbe in ?? () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007fba9bde9edc in g_main_context_iteration () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007fba9bde9f21 in ?? () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007fba9be14465 in ?? () from /lib64/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007fba9c09398d in start_thread () from /lib64/libc.so.6
+No symbol table info available.
+#6  0x00007fba9c11a380 in clone3 () from /lib64/libc.so.6
+No symbol table info available.
+
+Thread 1 (Thread 0x7fba9590e140 (LWP 4515) "darktable"):
+#0  0x00007fba9c0e19d7 in wait4 () from /lib64/libc.so.6
+No symbol table info available.
+#1  0x00007fba9c396728 in ?? () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#2  <signal handler called>
+No symbol table info available.
+#3  0x0000000000000000 in ?? ()
+No symbol table info available.
+#4  0x00007fba600a7f0e in ?? () from /lib64/libamdocl64.so
+No symbol table info available.
+#5  0x00007fba600a885f in ?? () from /lib64/libamdocl64.so
+No symbol table info available.
+#6  0x00007fba60415903 in ?? () from /lib64/libamdocl64.so
+No symbol table info available.
+#7  0x00007fba60416b93 in ?? () from /lib64/libamdocl64.so
+No symbol table info available.
+#8  0x00007fba6000729a in ?? () from /lib64/libamdocl64.so
+No symbol table info available.
+#9  0x00007fba600087a7 in ?? () from /lib64/libamdocl64.so
+No symbol table info available.
+#10 0x00007fba60008936 in ?? () from /lib64/libamdocl64.so
+No symbol table info available.
+#11 0x00007fba5ffed717 in ?? () from /lib64/libamdocl64.so
+No symbol table info available.
+#12 0x00007fba5ffba5a2 in clIcdGetPlatformIDsKHR () from /lib64/libamdocl64.so
+No symbol table info available.
+#13 0x00007fba942a3ed9 in ?? () from /lib64/libOpenCL.so.1
+No symbol table info available.
+#14 0x00007fba942a8616 in ?? () from /lib64/libOpenCL.so.1
+No symbol table info available.
+#15 0x00007fba942a8a44 in clGetPlatformIDs () from /lib64/libOpenCL.so.1
+No symbol table info available.
+#16 0x00007fba9c38051f in dt_opencl_init () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#17 0x00007fba9c2efa01 in dt_init () from /usr/bin/../lib64/darktable/libdarktable.so
+No symbol table info available.
+#18 0x0000558637570088 in ?? ()
+No symbol table info available.
+#19 0x00007fba9c02c5b0 in __libc_start_call_main () from /lib64/libc.so.6
+No symbol table info available.
+#20 0x00007fba9c02c679 in __libc_start_main_impl () from /lib64/libc.so.6
+No symbol table info available.
+#21 0x00005586375700d5 in ?? ()
+No symbol table info available.
+[Inferior 1 (process 4515) detached]
+backtrace written to /tmp/darktable_bt_JUG3Z1.txt
+Erreur de segmentation (core dumped)
+administrateur@Zalman:~> 
